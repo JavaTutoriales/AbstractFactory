@@ -1,6 +1,5 @@
 package com.javatutoriales.patrones.abstractfactory;
 
-import com.javatutoriales.patrones.abstractfactory.relacional.RelacionalRepositoryFactory;
 import com.javatutoriales.patrones.abstractfactory.repositories.CompraRepository;
 import com.javatutoriales.patrones.abstractfactory.repositories.ProductoRepository;
 import com.javatutoriales.patrones.abstractfactory.repositories.UsuarioRepository;
@@ -13,7 +12,7 @@ class AbstractRepositoryFactoryTest {
     AbstractRepositoryFactory repositoryFactory;
 
     @Test
-    public void testRelacionalRepository_cuandoTipoEsRelacional(){
+    public void testRelacionalRepository_cuandoTipoEsRelacional() {
         repositoryFactory = RepositoryFactoryMaker.getRepositoryFactory(TipoRepositorio.RELACIONAL);
 
         CompraRepository compraRepository = repositoryFactory.getCompraRepository();
@@ -26,7 +25,7 @@ class AbstractRepositoryFactoryTest {
     }
 
     @Test
-    public void testMongoRepository_cuandoTipoEsMongo(){
+    public void testMongoRepository_cuandoTipoEsMongo() {
         repositoryFactory = RepositoryFactoryMaker.getRepositoryFactory(TipoRepositorio.MONGO_DB);
 
         CompraRepository compraRepository = repositoryFactory.getCompraRepository();
